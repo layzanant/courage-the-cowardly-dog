@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courage</title>
+    <style>
+      #container {
+        border: 2px solid black;
+        width: 80%;
+        margin: 20px auto;
+        border-radius: 10px;
+        padding: 20px;
+        color: #a52f7a;
+      }
+
+      header {
+        text-align: center;
+        color: #89451c;
+        font-family: cursive;
+      }
+
+      nav {
+        text-align: center;
+        padding: 20px;
+        background-color: #ffffd0;
+        position: sticky;
+        left: 20px;
+        right: 20px;
+        top: 1px;
+        z-index: 2;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #a52f7a;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 0px 30px;
+      }
+
+      footer {
+        text-align: cen qqq ater;
+        background-color: #ffffd0;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 20px;
+      }
+
+      #leftImg {
+        position: absolute;
+        width: 200px;
+        left: 20px;
+        bottom: 20px;
+        border: 2px solid black;
+        background-color: red;
+      }
+
+      #leftImg:hover {
+        cursor: pointer;
+        background-color: white;
+      }
+
+      #rightImg {
+        position: absolute;
+        height: 200px;
+        right: 20px;
+        bottom: 20px;
+        border: 2px solid black;
+        background-color: green;
+      }
+
+      #rightImg:hover {
+        cursor: pointer;
+        background-color: white;
+      }
+
+      main {
+        position: relative;
+      }
+
+      #origImg {
+        background-image: url(/images/courage.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 600px;
+      }
+
+      #leftImg:hover ~ #origImg {
+        background-image: url(./images/scared.png);
+      }
+
+      #rightImg:hover ~ #origImg {
+        background-image: url(./images/vacation.png);
+      }
+
+      #fake {
+        height: 800px;
+        background-color: pink;
+      }
+
+      @media only screen and (max-width: 768px) {
+        #leftImg {
+          display: none;
+        }
+
+        #rightImg {
+          display: none;
+        }
+
+        nav {
+          position: static;
+          background-color: white;
+        }
+
+        nav a {
+          display: block;
+          background-color: #ffffd0;
+          margin-bottom: 10px;
+          padding: 20px;
+          border: 2px solid black;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>Courage the cowardly dog</h1>
+      </header>
+
+      <nav>
+        <a href="">Link 1</a>
+        <a href="">Link 2</a>
+        <a href="">Link 3</a>
+        <a href="">Link 4</a>
+      </nav>
+
+      <main>
+        <img id="leftImg" src="images/naughty.png" alt="Naughty" />
+        <img id="rightImg" src="images/muriel.png" alt="Muriel" />
+        <div id="origImg"></div>
+      </main>
+
+      <div id="fake"></div>
+
+      <footer>&copy; Eustace Bagge</footer>
+    </div>
+  </body>
+</html>
